@@ -1,9 +1,37 @@
+import { useState, useCallback, useMemo } from 'react'
 import logo from './logo.svg';
 import './App.css';
 
+const MAX_INPUT_LENGTH = 15 // максмимальное кол-во символов в инпуте
+
 function App() {
-  return (
+    const [userInput, setUserInput] = useState("")
+    const handleUserInput = useCallback((e) => {
+        const { target: { value } } = e
+        console.log('длинна инпута', value.length)
+        setUserInput(value)
+    }, [])
+    const underLineInputStyles = useMemo(() => {
+        // console.log('считается 1 раз')
+        return ({ width: `${5/ MAX_INPUT_LENGTH * 100}%`, background: "red" })
+    }, [])
+
+    // const underLineInputStyles2 = useMemo(() => {
+    //     console.log('считается каждый раз когда я меняю userInput')
+    //     return ({ width: `${5/ MAX_INPUT_LENGTH * 100}px`, background: "red" })
+    // }, [userInput])
+    //
+    // console.log('считается всегда', ({ width: `${5/ MAX_INPUT_LENGTH * 100}px`, background: "red" }))
+
+    return (
     <div className="App">
+        <div className="p-50">
+            <h1>{userInput}</h1>
+            <div className="pos-relative">
+                <input className="w-100-percent" type="text" value={userInput} onChange={handleUserInput}/>
+                <div className="input-underline" style={underLineInputStyles}/>
+            </div>
+        </div>
       {/*<button className="button-usual button-color-black">*/}
       {/*    USUAL*/}
       {/*</button>*/}
@@ -33,7 +61,7 @@ function App() {
                         January 2019
                     </div>
 
-                    <div className="week-header">
+                    <div className="week-header calendar-grid">
                         <span>M</span>
                         <span>t</span>
                         <span>w</span>
@@ -42,27 +70,15 @@ function App() {
                         <span>s</span>
                         <span>s</span>
                     </div>
-
-                    <div className="days-header">
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span>1</span>
-                    </div>
-                    <div className="days-header">
+                    <div className="days-header calendar-grid">
+                        <span className="last-column">1</span>
                         <span>2</span>
                         <span>3</span>
                         <span>5</span>
                         <span>6</span>
-                        <span>7</span>
+                        <span className="day-selected color-white">7</span>
                         <span>8</span>
                         <span>9</span>
-                    </div>
-                    <div className="days-header">
                         <span>10</span>
                         <span>11</span>
                         <span>12</span>
@@ -70,8 +86,6 @@ function App() {
                         <span>14</span>
                         <span>15</span>
                         <span>16</span>
-                    </div>
-                    <div className="days-header">
                         <span>17</span>
                         <span>18</span>
                         <span>19</span>
@@ -79,8 +93,6 @@ function App() {
                         <span>21</span>
                         <span>22</span>
                         <span>23</span>
-                    </div>
-                    <div className="days-header">
                         <span>24</span>
                         <span>25</span>
                         <span>26</span>
@@ -88,8 +100,6 @@ function App() {
                         <span>28</span>
                         <span>29</span>
                         <span>30</span>
-                    </div>
-                    <div className="days-header">
                         <span>31</span>
                     </div>
                     <div className="calendar-line-grey button-color-grey">
