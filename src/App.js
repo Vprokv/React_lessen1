@@ -1,9 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState, useCallback} from 'react'
+
 
 function App() {
+    const [userinput, setUserInput] = useState("Введите имя")
+    const handleUserInput = useCallback((e) =>{
+        const { target:{value} } = e
+        console.log(e)
+        setUserInput(value)
+    }, [])
+    const underlineInputStyles =
   return (
     <div className="App">
+        <div className="p-50">
+            <h1>{userinput}</h1>
+            <input type="text" value={userinput} onChange={handleUserInput}/>
+        </div>
+
       {/*<button className="button-usual button-color-black">*/}
       {/*    USUAL*/}
       {/*</button>*/}
@@ -21,10 +35,6 @@ function App() {
 
         <div className="calendar-rectangle-grey button-color-grey">
             <div className="calendar-rectangle-white button-color-white">
-                <div className="button-oval">
-                </div>
-                <div className="button-circle">
-                </div>
                 <div className="calendar-rectangle-white button-color-white">
                     <div className="f-s-14 pudding20x15x15x15">
                         Edit Access to Google Analytics
@@ -33,7 +43,7 @@ function App() {
                         January 2019
                     </div>
 
-                    <div className="week-header">
+                    <div className="week-header calendar-grid">
                         <span>M</span>
                         <span>t</span>
                         <span>w</span>
@@ -43,26 +53,15 @@ function App() {
                         <span>s</span>
                     </div>
 
-                    <div className="days-header">
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span> </span>
-                        <span>1</span>
-                    </div>
-                    <div className="days-header">
+                    <div className="days-header calendar-grid">
+                        <span className="last-column">1</span>
                         <span>2</span>
                         <span>3</span>
                         <span>5</span>
                         <span>6</span>
-                        <span>7</span>
+                        <span className="day-selected">7</span>
                         <span>8</span>
                         <span>9</span>
-                    </div>
-                    <div className="days-header">
                         <span>10</span>
                         <span>11</span>
                         <span>12</span>
@@ -70,8 +69,6 @@ function App() {
                         <span>14</span>
                         <span>15</span>
                         <span>16</span>
-                    </div>
-                    <div className="days-header">
                         <span>17</span>
                         <span>18</span>
                         <span>19</span>
@@ -79,8 +76,6 @@ function App() {
                         <span>21</span>
                         <span>22</span>
                         <span>23</span>
-                    </div>
-                    <div className="days-header">
                         <span>24</span>
                         <span>25</span>
                         <span>26</span>
@@ -88,8 +83,6 @@ function App() {
                         <span>28</span>
                         <span>29</span>
                         <span>30</span>
-                    </div>
-                    <div className="days-header">
                         <span>31</span>
                     </div>
                     <div className="calendar-line-grey button-color-grey">
