@@ -1,5 +1,11 @@
+body{
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
 }
 
 .App-logo {
@@ -36,3 +42,155 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  border: 0;
+
+}
+.button-color-black{
+  background: #000000;
+}
+
+.button-color-gold{
+  background: #BFA764;
+}
+
+.button-color-white{
+  background: #FFFFFF;
+}
+.button-color-grey{
+  background: #C4C4C4;
+}
+
+.write-color-black {
+  color: #000000;
+}
+.write-color-white{
+  color: #FFFFFF;
+}
+.write-color-gold{
+  color: #BFA764;
+}
+
+.button-usual {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 140%;
+  /* or 17px */
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-radius: 4px;
+
+
+}
+
+.calendar-rectangle-white{
+  width: 350px;
+  height: 630px;
+  left: 2017px;
+  top: 394px;
+  border-radius: 2px;
+
+}
+.calendar-rectangle-grey{
+  width: 352px;
+  height: 632px;
+  left: 2019px;
+  top: 396px;
+  border-radius: 2px;
+
+}
+.calendar-line-grey{
+  width: 352px;
+  height: 1px;
+  left: 2019px;
+  top: 396px;
+  padding: 0px 0px 0px 0px ;
+
+}
+.calendar-rectangle-324x180{
+  width: 324px;
+  height: 180px;
+  left: 2017px;
+  top: 394px;
+  border-radius: 2px;
+  padding: 5px 5px 5px 10px;
+
+}
+.calendar-rectangle-324x161{
+  width: 324px;
+  height: 161px;
+  left: 2017px;
+  top: 394px;
+  border-radius: 2px;
+  padding: 5px 5px 5px 10px;
+
+}
+.button-oval{
+  width: 213px;
+  height: 44px;
+  left: 2035px;
+  top: 645px;
+
+
+  background: #F1DA99;
+  border-radius: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center
+
+
+}
+.button-circle{
+  width: 44px;
+  height: 44px;
+  left: 2255px;
+  top: 605px;
+
+  background: #BFA764;
+  border-radius: 40px;
+}
+
+.calendar-container {
+  width: 350px;
+  background: #C4C4C4;
+  border-radius: 2px;
+  padding: 20px 15px 15px 15px;
+
+}
+
+.week-header{
+  color: #909090;
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.days-header{
+  color: #000000;
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.f-s-14{
+  font-size: 14px;
+
+}
+
+.f-s-18{
+  font-size: 18px;
+  padding: 10px 120px ;
+}
+
+.pudding20x15x15x15{
+  padding: 20px 15px 15px 15px;
+}
+
+.pudding5x5x5x5{
+  padding: 5px 5px 0px 0px;
+}
+
