@@ -49,10 +49,6 @@ function App() {
 
         <div className="calendar-rectangle-grey button-color-grey">
             <div className="calendar-rectangle-white button-color-white">
-                <div className="button-oval">
-                </div>
-                <div className="button-circle">
-                </div>
                 <div className="calendar-rectangle-white button-color-white">
                     <div className="f-s-14 pudding20x15x15x15">
                         Edit Access to Google Analytics
