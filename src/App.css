@@ -5,7 +5,11 @@ body{
 }
 
 .App {
+  display: grid;
+ grid-gap: 1em;
   width: 100%;
+  padding: 20px;
+  margin: 20px;
 }
 
 .App-logo {
@@ -62,6 +66,9 @@ button {
   background: #C4C4C4;
 }
 
+.button-color-#F3F3F3{
+  background: #F3F3F3;
+}
 .write-color-black {
   color: #000000;
 }
@@ -73,6 +80,8 @@ button {
 }
 
 .button-usual {
+  width: 184px;
+  height: 34px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -83,8 +92,98 @@ button {
   text-transform: uppercase;
   color: #FFFFFF;
   border-radius: 4px;
+  margin: 5px;
+
+}
+
+.Headline-container{
+  width: 489px;
+  height: 364px;
+  left: 2463px;
+  top: 860px;
+  background: #BDBDBD;
+  padding: 20px;
+
+}
+.Headline-container-White{
+  width: 440px;
+  height: 300px;
+  left: 2487px;
+  top: 885px;
+  background: #FFFFFF;
+}
+.Headline-rectangle-white-392x21{
+  width: 392px;
+  height: 21px;
+  left: 2511px;
+  top: 932px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+
+  padding: 47px 24px 232px 24px ;
+}
+
+.Headline-rectangle-white-227x17{
+  width: 390px;
+  height: 34px;
 
 
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  /*line-height: 140%;*/
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  padding: 20px 0px 0px 0px;
+}
+.place-holder{
+  width: 390px;
+  height: 34px;
+  left: 22px;
+  top: 2px;;
+
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 2px;}
+
+ .Paragraph-style{
+   width: 392px;
+   height: 44px;
+   left: 2512px;
+   top: 1040px;
+
+ }
+.Paragraph-style-1{
+  font-size: 14px;
+  line-height: 140%;
+
+  color: #909090;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 10px 0px 0px 0px;
+}
+
+.place-holder-1{
+  color: #C4C4C4;
+  font-size: 12px;
+  line-height: 120%;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .calendar-rectangle-white{
@@ -97,10 +196,11 @@ button {
 }
 .calendar-rectangle-grey{
   width: 352px;
-  height: 632px;
+  height: 800px;
   left: 2019px;
   top: 396px;
   border-radius: 2px;
+
 
 }
 .calendar-line-grey{
@@ -129,31 +229,6 @@ button {
   padding: 5px 5px 5px 10px;
 
 }
-.button-oval{
-  width: 213px;
-  height: 44px;
-  left: 2035px;
-  top: 645px;
-
-
-  background: #F1DA99;
-  border-radius: 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center
-
-
-}
-.button-circle{
-  width: 44px;
-  height: 44px;
-  left: 2255px;
-  top: 605px;
-
-  background: #BFA764;
-  border-radius: 40px;
-}
 
 .calendar-container {
   width: 350px;
@@ -161,6 +236,51 @@ button {
   border-radius: 2px;
   padding: 20px 15px 15px 15px;
 
+}
+
+.button-Active-User-Name{
+display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 36px;
+  width: 200px;
+  background: #F3F3F3;
+
+}
+
+
+.Active-User-Name{
+
+  border-radius: 2px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: normal;
+  display: flex;
+  font-size: 12px;
+  line-height: 140%;
+
+}
+
+.Ellipse-grey{
+  height: 5px;
+  width: 5px;
+  background: #BDBDBD;
+  border-radius: 2px;
+  margin: 0px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Ellipse-white{
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  margin: 0px;
+  display: flex;
 }
 
 .color-white {
@@ -184,7 +304,7 @@ button {
   margin: 15px;
 }
 
-.day-selected {
+.day-selected-dark {
   background: #BFA764;
   border-radius: 50%;
   height: 100%;
@@ -193,6 +313,25 @@ button {
   justify-content: center;
 }
 
+.day-selected-light-1 {
+  background: #F1DA99;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-selected-light-2 {
+  background: #F1DA99;
+  border-radius: 0%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .last-column {
   grid-column: -1 / -2;
 }
@@ -233,4 +372,13 @@ button {
 
 .w-100-percent {
   width: 100%;
+}
+
+vector-cross{
+  left: 0%;
+  right: 100%;
+  top: -0.01%;
+  bottom: 0.71%;
+  padding: 20px 15px 15px 15px;
+
 }
