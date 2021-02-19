@@ -34,6 +34,7 @@ function App() {
                     <div className="input-underline" style={underLineInputStyles}/>
                 </div>
             </div>
+            <button> текст </button>
             {/*<button className="button-usual button-color-black">*/}
             {/*    USUAL*/}
             {/*</button>*/}
@@ -132,53 +133,90 @@ function App() {
             </div>
             <div className="Headline-container">
                 <div className="Headline-container-White">
-                    <div className="vector-cross">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0)">
-                                <path
-                                    d="M5.42641 5.95899L0.11491 11.2705C-0.0326524 11.4181 -0.0326524 11.6571 0.11491 11.8047C0.188598 11.8786 0.285348 11.9153 0.38191 11.9153C0.47866 11.9153 0.575223 11.8786 0.64891 11.8047L6.00035 6.45324L11.3518 11.8047C11.4257 11.8786 11.5222 11.9153 11.6188 11.9153C11.7154 11.9153 11.8121 11.8786 11.8858 11.8047C12.0333 11.6571 12.0333 11.4181 11.8858 11.2705L6.57447 5.95899L11.8893 0.643742C12.0369 0.49618 12.0369 0.257117 11.8893 0.109555C11.7418 -0.0378203 11.5027 -0.0378203 11.3554 0.109555L6.00054 5.46474L0.64516 0.109742C0.497598 -0.0376328 0.258723 -0.0376328 0.11116 0.109742C-0.0364023 0.257305 -0.0364023 0.496367 0.11116 0.64393L5.42641 5.95899Z"
-                                    fill="#BDBDBD"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0">
-                                    <rect width="12" height="12" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <div className="Headline-rectangle-white-392x21">Headline
-                            <div className="Headline-rectangle-white-227x17">Field name
-                            </div>
-
-                            <div className="place-holder">
-                                <div className="place-holder-1">Placeholder</div>
-                            </div>
-                            <div className="Paragraph-style">
-                                <div className="Paragraph-style-1">Paragraph style</div>
-                            </div>
-                            <button className="button-usual button-color-grey">
-                                SECONDARY BUTT
-                            </button>
-                            <button className="button-usual button-color-gold">
-                                ACTIVE BUTTON
-                            </button>
+                    <svg className="icon-cross-Headline" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                            <path
+                                d="M5.42641 5.95899L0.11491 11.2705C-0.0326524 11.4181 -0.0326524 11.6571 0.11491 11.8047C0.188598 11.8786 0.285348 11.9153 0.38191 11.9153C0.47866 11.9153 0.575223 11.8786 0.64891 11.8047L6.00035 6.45324L11.3518 11.8047C11.4257 11.8786 11.5222 11.9153 11.6188 11.9153C11.7154 11.9153 11.8121 11.8786 11.8858 11.8047C12.0333 11.6571 12.0333 11.4181 11.8858 11.2705L6.57447 5.95899L11.8893 0.643742C12.0369 0.49618 12.0369 0.257117 11.8893 0.109555C11.7418 -0.0378203 11.5027 -0.0378203 11.3554 0.109555L6.00054 5.46474L0.64516 0.109742C0.497598 -0.0376328 0.258723 -0.0376328 0.11116 0.109742C-0.0364023 0.257305 -0.0364023 0.496367 0.11116 0.64393L5.42641 5.95899Z"
+                                fill="#BDBDBD"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect width="12" height="12" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div className="Headline-container-text-headline">
+                        Headline
+                    </div>
+                    <div className="Headline-container-FieldName">
+                        <div className="Headline-container-text-FieldName">
+                            Field name
                         </div>
+                        <div className="Headline-container-text-placeholder">
+                            <input type="text" placeholder="Placeholder" className="input-text-placeholder"/>
+                            <div className="icon-check-mark-Headline">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                        <path d="M13.911 2.45734C13.7923 2.31109 13.5993 2.31109 13.4806 2.45734L7.00031 10.4424L0.51939 2.45811C0.400692 2.31187 0.207722 2.31187 0.0890237 2.45811C-0.0296746 2.60436 -0.0296746 2.84212 0.0890237 2.98836L6.78483 11.2381C6.84449 11.3109 6.92239 11.3477 7.00031 11.3477C7.07824 11.3477 7.15613 11.3109 7.2152 11.2374L13.911 2.98762C14.0297 2.84134 14.0297 2.60359 13.911 2.45734Z" fill="#BDBDBD"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="14" height="14" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="Headline-container-text-ParagraphStyle">
+                        Paragraph style
+                    </div>
+                    <div className="headline-button">
+                        <button className="button-usual button-color-grey">
+                            SECONDARY BUTT
+                        </button>
+                        <button className="button-usual background-color-BFA764">
+                            ACTIVE BUTTON
+                        </button>
                     </div>
                 </div>
             </div>
             <div className="button-Active-User-Name">
                 <div className="Ellipse-white">
-                    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0.353553" y1="0.646447" x2="10.253" y2="10.5459" stroke="#BDBDBD"/>
-                        <line x1="0.51754" y1="10.6709" x2="10.417" y2="0.771366" stroke="#BDBDBD"/>
-                    </svg>
-
+                    <div className="icon-cross-button-Active-User-Name">
+                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.353553" y1="0.646447" x2="10.253" y2="10.5459" stroke="#BDBDBD"/>
+                            <line x1="0.51754" y1="10.6709" x2="10.417" y2="0.771366" stroke="#BDBDBD"/>
+                        </svg>
+                    </div>
                 </div>
                 <div className="Active-User-Name"> Active User Name</div>
-                <div className="Ellipse-grey"></div>
+                <div className="combo-three-ellipse-5px">
+                    <div className="ellipse-5px background-color-BDBDBD"></div>
+                    <div className="ellipse-5px background-color-BDBDBD"></div>
+                    <div className="ellipse-5px background-color-BDBDBD"></div>
+                </div>
 
             </div>
 
+            <div className="button-Active-User-Name">
+                <div className="Ellipse-white">
+                    <div className="icon-cross-button-Active-User-Name">
+                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.353553" y1="0.646447" x2="10.253" y2="10.5459" stroke="#BDBDBD"/>
+                            <line x1="0.51754" y1="10.6709" x2="10.417" y2="0.771366" stroke="#BDBDBD"/>
+                        </svg>
+                    </div>
+                </div>
+                <div className="Active-User-Name"> Active User Name</div>
+                <div className="combo-three-ellipse-5px">
+                    <div className="ellipse-5px background-color-BFA764"></div>
+                    <div className="ellipse-5px background-color-BFA764"></div>
+                    <div className="ellipse-5px background-color-BFA764"></div>
+                </div>
+
+            </div>
 </div>
     );
 }

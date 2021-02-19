@@ -55,7 +55,7 @@ button {
   background: #000000;
 }
 
-.button-color-gold{
+.background-color-BFA764{
   background: #BFA764;
 }
 
@@ -78,6 +78,10 @@ button {
 .write-color-gold{
   color: #BFA764;
 }
+.background-color-BDBDBD{
+  background: #BDBDBD;
+}
+
 
 .button-usual {
   width: 184px;
@@ -87,103 +91,112 @@ button {
   font-weight: bold;
   font-size: 12px;
   line-height: 140%;
-  /* or 17px */
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
   border-radius: 4px;
-  margin: 5px;
 
 }
 
 .Headline-container{
   width: 489px;
   height: 364px;
-  left: 2463px;
-  top: 860px;
   background: #BDBDBD;
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
 
 }
 .Headline-container-White{
-  width: 440px;
-  height: 300px;
-  left: 2487px;
-  top: 885px;
+  width: 100%;
+  height: 100%;
+  position: relative;
   background: #FFFFFF;
+  padding: 35px 25px 0px 25px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
 }
-.Headline-rectangle-white-392x21{
-  width: 392px;
-  height: 21px;
-  left: 2511px;
-  top: 932px;
-
-  font-family: Helvetica;
-  font-style: normal;
+.Headline-container-text-headline{
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
   color: #333333;
-
-  padding: 47px 24px 232px 24px ;
+  margin-bottom: 25px;
+}
+.Headline-container-FieldName{
+  margin-bottom: 10px;
 }
 
-.Headline-rectangle-white-227x17{
-  width: 390px;
+.Headline-container-text-placeholder{
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 120%;
   height: 34px;
+  width: 390px;
+  left: 0px;
+  top: 22px;
+  border-radius: 2px;
+  color: #C4C4C4;
+  display: flex;
 
+}
 
-  font-family: Helvetica;
-  font-style: normal;
+.input-text-placeholder{
+  margin: 10px;
+}
+
+.Headline-container-text-FieldName{
   font-weight: normal;
   font-size: 14px;
   /*line-height: 140%;*/
   display: flex;
   align-items: center;
   justify-content: left;
-
-  padding: 20px 0px 0px 0px;
+  margin-bottom: 10px;
 }
-.place-holder{
-  width: 390px;
-  height: 34px;
-  left: 22px;
-  top: 2px;;
 
-  background: #FFFFFF;
-  border: 1px solid #BDBDBD;
-  box-sizing: border-box;
-  border-radius: 2px;}
-
- .Paragraph-style{
-   width: 392px;
-   height: 44px;
-   left: 2512px;
-   top: 1040px;
-
- }
-.Paragraph-style-1{
+.Headline-container-text-ParagraphStyle{
   font-size: 14px;
   line-height: 140%;
-
   color: #909090;
-
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  padding: 10px 0px 0px 0px;
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: normal;
 }
+.headline-button{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 
 .place-holder-1{
   color: #C4C4C4;
   font-size: 12px;
   line-height: 120%;
-
-
   display: flex;
   align-items: center;
   justify-content: left;
+}
+
+
+.icon-cross-Headline{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.icon-check-mark-Headline{
+  position: absolute;
+  top: 115px;
+  right: 45px;
+}
+
+.icon-cross-button-Active-User-Name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
 }
 
 .calendar-rectangle-white{
@@ -239,8 +252,10 @@ button {
 }
 
 .button-Active-User-Name{
-display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 36px;
   width: 200px;
   background: #F3F3F3;
@@ -262,12 +277,11 @@ display: grid;
 
 }
 
-.Ellipse-grey{
+.ellipse-5px{
   height: 5px;
   width: 5px;
-  background: #BDBDBD;
-  border-radius: 2px;
-  margin: 0px;
+  border-radius: 3px;
+  margin: 1px;
   display: flex;
   align-content: center;
   align-items: center;
@@ -279,8 +293,14 @@ display: grid;
   width: 20px;
   background: #FFFFFF;
   border-radius: 20px;
-  margin: 0px;
   display: flex;
+  margin: 10px;
+}
+
+.combo-three-ellipse-5px{
+  display: flex;
+flex-direction: column;
+  margin: 10px;
 }
 
 .color-white {
@@ -302,6 +322,7 @@ display: grid;
   text-align: center;
   grid-auto-rows: 44px;
   margin: 15px;
+  padding: 2px;
 }
 
 .day-selected-dark {
@@ -381,4 +402,12 @@ vector-cross{
   bottom: 0.71%;
   padding: 20px 15px 15px 15px;
 
+}
+
+.m-l-a{
+  margin-left: auto;
+}
+
+.m-r-a{
+  margin-right: auto;
 }
