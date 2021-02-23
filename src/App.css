@@ -286,6 +286,7 @@ button {
   width: 1220px;
   background: #FFFFFF;
   border: 1px solid #DDDDDD;
+  position: relative;
 }
 
 .bar-NewPlan{
@@ -304,25 +305,21 @@ button {
   align-content: center;
 }
 
-
-
-.line-bar-brief-orders-period{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 2px;
-  width: 1220px;
-  background:  #F3F3F3;
-
-}
-
 .bar-brief-orders-period-RightContent{
   display: flex;
   flex-direction: row;
   align-items: center;
   align-content: center;
   justify-content: left;
-  margin: 694px;
+}
+.bar-brief-orders-period::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: red;
 }
 
 .bar-brief-orders-period-LeftContent{
@@ -331,7 +328,7 @@ button {
   align-items: center;
   align-content: center;
   justify-content: left;
-  margin: 4px;
+  margin: 4px auto 4px 4px;
 }
 
 .box-text-brief{

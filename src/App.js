@@ -242,8 +242,6 @@ function App() {
             </div>
 
             <div className="bar-brief-orders-period">
-                <div className="line-bar-brief-orders-period">
-                </div>
                 <div className="bar-brief-orders-period-LeftContent">
                     <div className="box-text-brief">
                         Brief
@@ -359,7 +357,7 @@ function App() {
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.42641 5.95899L0.11491 11.2705C-0.0326524 11.4181 -0.0326524 11.6571 0.11491 11.8047C0.188598 11.8786 0.285348 11.9153 0.38191 11.9153C0.47866 11.9153 0.575223 11.8786 0.64891 11.8047L6.00035 6.45324L11.3518 11.8047C11.4257 11.8786 11.5222 11.9153 11.6188 11.9153C11.7154 11.9153 11.8121 11.8786 11.8858 11.8047C12.0333 11.6571 12.0333 11.4181 11.8858 11.2705L6.57447 5.95899L11.8893 0.643742C12.0369 0.49618 12.0369 0.257117 11.8893 0.109555C11.7418 -0.0378203 11.5027 -0.0378203 11.3554 0.109555L6.00054 5.46474L0.64516 0.109742C0.497598 -0.0376328 0.258723 -0.0376328 0.11116 0.109742C-0.0364023 0.257305 -0.0364023 0.496367 0.11116 0.64393L5.42641 5.95899Z" fill="white"/>
                             </svg>
- 
+
                         </div>
                     </div>
                     <div className="box-text-Usual">
@@ -378,6 +376,13 @@ function App() {
 
                 </div>
             </div>
+
+
+            <p>
+                asdasd asda sda sdasdasd asda sda sdasdasd asda sda sdasdasd asda sda sdasdasd asda sda sdasdasd asda
+                sda sdasdasd asda sda sdasdasd asda sda sdasdasd asda sda sdasdasd <span>asda sda sdasdasd</span> asda sda sdasdasd
+                asda sda sdasdasd asda sda sd
+            </p>
 </div>
     );
 }
