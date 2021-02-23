@@ -198,6 +198,12 @@ button {
   align-items: center;
   margin: 4px;
 }
+.icon-cross-button-Practice{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+}
 
 .calendar-rectangle-white{
   width: 350px;
@@ -262,9 +268,202 @@ button {
 
 }
 
+.button-Practice-black-symbol{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 36px;
+  width: 200px;
+  background: #BFA764;
+  font-weight: bold;
+}
+
+.bar-brief-orders-period{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 37px;
+  width: 1220px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+}
+
+.bar-NewPlan{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 1220px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+}
+.box-button-NewPlan{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+
+
+.line-bar-brief-orders-period{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 2px;
+  width: 1220px;
+  background:  #F3F3F3;
+
+}
+
+.bar-brief-orders-period-RightContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: left;
+  margin: 694px;
+}
+
+.bar-brief-orders-period-LeftContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: left;
+  margin: 4px;
+}
+
+.box-text-brief{
+  height: 36px;
+  width: 100px;
+  background: #909090;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  align-items: center;
+}
+.box-text-orders{
+  height: 36px;
+  width: 100px;
+  background: #BDBDBD;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  align-items: center;
+  margin-left: 2px;
+}
+.box-text-period{
+  height: 36px;
+  width: 100px;
+  background: #BDBDBD;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.box-text-Stats{
+  height: 36px;
+  width: 100px;
+  background: #F3F3F3;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #BDBDBD;
+  align-items: center;
+  margin-left: 2px;
+}
+.box-text-PLUS{
+  height: 36px;
+  width: 36px;
+  background: #BDBDBD;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  align-items: center;
+  margin-left: 2px;
+}
+
+
+.box-text-NewPlan{
+  height: 40px;
+  width: 178px;
+  background: #BFA764;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  align-items: center;
+  margin-left: 2px;
+}
+.box-text-Usual{
+  height: 40px;
+  width: 178px;
+  background: #BDBDBD;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.background-icon-bar-brief-orders-period{
+  height: 36px;
+  width: 36px;
+  background: #BFA764;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-style: normal;
+  font-weight: bold;
+  align-items: center;
+  margin-left: 2px;
+}
+
 
 .Active-User-Name{
-
   border-radius: 2px;
   justify-content: center;
   align-content: center;
@@ -273,6 +472,21 @@ button {
   font-style: normal;
   display: flex;
   font-size: 12px;
+  line-height: 140%;
+
+}
+
+.button-Practice-text-practice{
+  width: 100px;
+  height: 21px;
+  border-radius: 2px;
+  justify-content: left;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: normal;
+  display: flex;
+  font-size: 18px;
   line-height: 140%;
 
 }
@@ -288,19 +502,52 @@ button {
   text-align: center;
 }
 
+.ellipse-3px{
+  height: 3px;
+  width: 3px;
+  border-radius: 3px;
+  margin: 1px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.oval-3px{
+  height: 3px;
+  width: 16px;
+  border-radius: 3px;
+  margin: 1px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
 .Ellipse-white{
   height: 20px;
   width: 20px;
   background: #FFFFFF;
   border-radius: 20px;
   display: flex;
-  margin: 10px;
 }
 
 .combo-three-ellipse-5px{
   display: flex;
 flex-direction: column;
-  margin: 10px;
+}
+
+.combo-three-ellipse-3px{
+  display: flex;
+  flex-direction: column;
+}
+
+.combo-three-oval-3px{
+  display: flex;
+  flex-direction: column;
 }
 
 .color-white {
@@ -410,4 +657,16 @@ vector-cross{
 
 .m-r-a{
   margin-right: auto;
+}
+
+.m-10px{
+  margin: 10px;
+}
+
+.m-15px{
+  margin: 15px;
+}
+
+.m-30px{
+  margin: 30px;
 }
