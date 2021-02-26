@@ -294,8 +294,6 @@ function App() {
 
 
             <div className="bar-brief-orders-period">
-                <div className="line-bar-brief-orders-period">
-                </div>
                 <div className="bar-brief-orders-period-LeftContent">
                     <div className="box-text-brief">
                         Brief
