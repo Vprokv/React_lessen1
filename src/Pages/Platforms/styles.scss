@@ -30,7 +30,7 @@
     }
 
     .container-text-left-menu {
-      margin-top: 25px;
+      //margin-top: 25px;
       margin-left: 7px;
 
       .Symbol-left-menu {
@@ -45,6 +45,243 @@
         font-size: 14px;
         line-height: 16px;
 
+      }
+    }
+
+    .container-copyright{
+      height: 14px;
+      width: 126px;
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 8px;
+      line-height: 240%;
+      color: #909090;
+      margin: 60px 0px 0px 7px;
+    }
+  }
+
+  .container-right-content {
+    .bar-platforms-TOP {
+      height: 40px;
+      width: 1130px;
+      box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+      background: #FFFFFF;
+      display: flex;
+
+      .container-platforms {
+        height: 40px;
+        width: 178px;
+        background: #BFA764;
+        margin-left: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        align-content: center;
+
+        .text-platforms {
+          font-family: Helvetica;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 16px;
+          color: #FFFFFF;
+          margin-left: 10px;
+        }
+      }
+
+      .container-user {
+        display: flex;
+        margin: 7px 32px auto auto;
+      }
+    }
+
+    .CONTENT {
+      display: flex;
+      margin-top: 30px;
+
+      .container-AllertsPlatformsTrackerAnalytics {
+        height: 15px;
+        width: 406px;
+        //margin-top: 30px;
+        margin-left: 20px;
+        //box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.09);
+        display: flex;
+        align-content: center;
+
+        .container-Allerts {
+          display: flex;
+          align-content: center;
+          border-right: 2px solid #909090;
+
+          .text-allerts {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 140%;
+            color: #909090;
+            margin-right: 0px;
+
+          }
+
+        }
+
+        .container-Platforms {
+          display: flex;
+          align-content: center;
+          //border-right: 2px solid #909090;
+          .text-platforms1 {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 140%;
+            color: #333333;
+            margin-right: 12px;
+            margin-left: 12px;
+          }
+        }
+
+        .container-Tracker {
+          display: flex;
+          align-content: center;
+
+          .text-tracker {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 140%;
+            color: #909090;
+            margin-right: 12px;
+            margin-left: 12px;
+          }
+        }
+      }
+
+      .container-7Platforms {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        height: 15px;
+        width: 167px;
+        margin-left: auto;
+        margin-right: 25px;
+        color: #909090;
+
+        .text-7Platforms {
+          font-family: Gotham Narrow;
+          font-style: normal;
+          font-size: 14px;
+          line-height: 31px;
+          text-align: right;
+        }
+
+
+      }
+    }
+
+    .bar-platforms-WIDTH {
+      width: 1083px;
+      height: 100px;
+      background: #333333;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.21);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+
+      .text-AllPublicis {
+        width: 226px;
+        height: 20px;
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        margin-left: 20px;
+      }
+
+      .filter-container {
+        margin-left: 20px;
+
+        .text-MyFilters {
+          width: 75px;
+          height: 13.83px;
+          font-family: Helvetica;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 140%;
+          color: #FFFFFF;
+        }
+
+        .filter-elements {
+          margin-top: 15px;
+          display: flex;
+
+          .elements-Samsung {
+            width: 90px;
+            height: 32px;
+            background: #F3F3F3;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+
+            .text-Samsung {
+              margin-left: 10px;
+              font-family: Helvetica;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 140%;
+              color: #333333;
+            }
+          }
+
+          .elements-CocaCola {
+            width: 154px;
+            height: 32px;
+            background: #F3F3F3;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            margin-left: 8px;
+
+            .text-CocaCola {
+              margin-left: 10px;
+              font-family: Helvetica;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 140%;
+              color: #333333;
+            }
+          }
+
+          .elements-Pepsi {
+            width: 62px;
+            height: 32px;
+            background: #F3F3F3;
+            border-radius: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 8px;
+
+            .text-pepsi {
+              margin-left: 10px;
+              font-family: Helvetica;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 140%;
+              color: #333333;
+            }
+          }
+
+        }
       }
     }
   }

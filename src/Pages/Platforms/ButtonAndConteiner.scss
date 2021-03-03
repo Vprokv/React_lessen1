@@ -1,0 +1,59 @@
+.Container-company {
+  height: 80px;
+  width: 1086px;
+  border-radius: 2px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.09);
+  border-radius: 2px;
+  margin-left: 20px;
+  //margin-top: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.container-logo{
+  margin-left: 20px ;
+  width: 100px;
+  height: 80px;
+  background: #BDBDBD;
+}
+
+.Container-text-company{
+  height: 18px;
+  width: 115px;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: #333333;
+  display: flex;
+  margin-left: 50px;
+}
+
+.button-120x30{
+  height: 30px;
+  width: 120px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #BDBDBD;
+}
+.button-167x30{
+  height: 30px;
+  width: 167px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #BDBDBD;
+}
+
+.circle{
+  height: 26px;
+  width: 26px;
+  background: #C4C4C4;
+  border-radius: 26px;
+}
