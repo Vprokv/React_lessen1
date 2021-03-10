@@ -338,7 +338,7 @@ const Platforms = props => {
                         </button>
                     </div>
                     <div className="Container-company  m-t-12">
-                        <div className="container-logo"></div>
+                        <img src="/assets/Platforms/MyTarget.svg" alt="MyTarget" className="container-logo"/>
                         <div className="Container-text-company">My Target</div>
                         <div className="d-flex align-items-center m-l-60">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -927,4 +927,4 @@ const Platforms = props => {
 
 Platforms.propTypes = {};
 
-export default Platforms;s
+export default Platforms;
