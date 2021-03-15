@@ -5,18 +5,11 @@ import './App.css';
 const MAX_INPUT_LENGTH = 15 // максмимальное кол-во символов в инпуте
 
 function App() {
-    const [userInput, setUserInput] = useState("")
-    const handleUserInput = useCallback((e) => {
-        const {target: {value}} = e
-        console.log('длинна инпута', value.length)
-        setUserInput(value)
-
-
-    }, [])
+    const [userInput, setUserInput] = useState("1")
     const underLineInputStyles = useMemo(() => {
         console.log('считается 1 раз')
-        return ({width: `${5 / MAX_INPUT_LENGTH * 100}%`, background: "red"})
-    }, [])
+        return ({width: `${userInput.length / MAX_INPUT_LENGTH * 100}%`, background: "red"})
+    }, [userInput])
 
     // const underLineInputStyles2 = useMemo(() => {
     //     console.log('считается каждый раз когда я меняю userInput')
@@ -24,31 +17,101 @@ function App() {
     // }, [userInput])
     //
     // console.log('считается всегда', ({ width: `${5/ MAX_INPUT_LENGTH * 100}px`, background: "red" }))
+    const handleUserInput = useCallback((e) => {
+        const {target: {value}} = e
+        console.log('длинна инпута', value.length)
+        if (value.length <= MAX_INPUT_LENGTH) {
+            setUserInput(value)
+        }
+    }, [])
+
+    const [blocks, setBlocks] = useState([{ name: "First", updated: new Date() }])
+    const [newBlock, setNewBlockState] = useState(null)
+
+    const onEditNewBlock = useCallback(({ target: { value, id }}) => {
+        setNewBlockState({ ...newBlock, [id]: value })
+    }, [newBlock])
+
+    const toggleAddNewBlock = useCallback(() => {
+        setNewBlockState(newBlock ? null : {})
+    }, [newBlock])
+
+    const applyChanges = useCallback(() => {
+        setBlocks([...blocks, { ...newBlock, updated: new Date() }])
+        toggleAddNewBlock()
+    }, [newBlock, toggleAddNewBlock])
+
 
     return (
-        <div className="App">
-            <div className="p-50">
-                <h1>{userInput}</h1>
-                <div className="pos-relative">
-                    <input className="w-100-percent" type="text" value={userInput} onChange={handleUserInput}/>
-                    <div className="input-underline" style={underLineInputStyles}/>
-                </div>
+        <div className="flex-container" style={{ padding: "20px" }}>
+            <h1>{userInput}</h1>
+            <div className="pos-relative">
+                <input className="w-100-percent" type="text" value={userInput} onChange={handleUserInput}/>
+                <div className="input-underline" style={underLineInputStyles}/>
             </div>
+            <div style={{ display: "flex", justifyContent: "center"}}>
+                <button
+                    style={{background: "palegoldenrod", width: "200px", margin: "20px auto"}}
+                    onClick={toggleAddNewBlock}
+                >
+                    {newBlock ? "Cancel add new Block" : "Add new Block"}
+                </button>
+                {newBlock && newBlock.name && <button
+                    style={{background: "gold", width: "200px", margin: "20px auto"}}
+                    onClick={applyChanges}
+                >
+                    Apply Changes
+                </button>}
+            </div>
+            {newBlock && <div className="p-50" style={{ border: "1px dashed black", marginBottom: "50px"}}>
+                <label htmlFor="name">name</label>
+                <input
+                    style={{ border: "1px solid black", marginBottom: "10px" }}
+                    id="name"
+                    className="w-100-percent"
+                    type="text"
+                    value={newBlock.name}
+                    onChange={onEditNewBlock}
+                />
+                <label htmlFor="money">money</label>
+                <input
+                    id="money"
+                    style={{ border: "1px solid black", marginBottom: "10px" }}
+                    className="w-100-percent"
+                    type="text"
+                    value={newBlock.money}
+                    onChange={onEditNewBlock}
+                />
+                <label htmlFor="priority">priority</label>
+                <input
+                    id="priority"
+                    style={{ border: "1px solid black", marginBottom: "10px" }}
+                    className="w-100-percent"
+                    type="text"
+                    value={newBlock.priority}
+                    onChange={onEditNewBlock}
+                />
+            </div>}
+
+            <div style={{ display: "flex" }}>
+                {blocks.map(({ name, updated, money = 0, priority = "last" }, i) => (
+                    <div style={{
+                        padding: "5px",
+                        height: "100px",
+                        background: "black",
+                        color: "white",
+                        marginRight: "5px",
+                    }}
+                    >
+                        <div>{name}</div>
+                        <div>{money}$</div>
+                        <div>{priority}</div>
+                        <div>{updated.toUTCString()}</div>
+                    </div>
+                ))}
+            </div>
+
             <button> текст </button>
-            {/*<button className="button-usual button-color-black">*/}
-            {/*    USUAL*/}
-            {/*</button>*/}
-            {/*  <button className="button-usual button-color-gold">*/}
-            {/*    USUAL*/}
-            {/*</button><button className="button-usual button-color-black">*/}
-            {/*    USUAL*/}
-            {/*</button><button className="button-usual button-color-gold">*/}
-            {/*    USUAL*/}
-            {/*</button><button className="button-usual button-color-gold">*/}
-            {/*    USUAL*/}
-            {/*</button><button className="button-usual">*/}
-            {/*    USUAL*/}
-            {/*</button>*/}
 
             <div className="calendar-rectangle-grey button-color-grey">
                 <div className="calendar-rectangle-white button-color-white">
