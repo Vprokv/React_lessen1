@@ -6,6 +6,7 @@ import './ButtonAndConteiner.scss'
 import './TextAndBackgroundColor.scss'
 import './MarginAndPadding.scss'
 import './DisplaySetting.scss'
+import IconsRegistry from "./icons";
 
 
 const Platforms = props => {
@@ -342,27 +343,7 @@ const Platforms = props => {
                             <img src="image/Platforms/MyTarget.svg" alt="Logo My Target"/>
                         </div>
                         <div className="Container-text-company">My Target</div>
-                        <div className="d-flex align-items-center ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
-                                      height="24">
-                                    <circle cx="12" cy="12" r="12" fill="#C4C4C4"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <rect x="-5" y="-3" width="39" height="34" fill="#F3F3F3"/>
-                                </g>
-                                <g clip-path="url(#clip0)">
-                                    <path
-                                        d="M18.8578 9.16835C18.7304 9.07269 18.555 9.07368 18.4294 9.17041L14.7445 11.9834L12.326 6.51929C12.2116 6.2618 11.7895 6.2618 11.6747 6.51929L9.22794 12.0463L5.57507 9.17322C5.44891 9.07459 5.27248 9.07185 5.14396 9.16653C5.01499 9.26189 4.96617 9.43208 5.02404 9.58045L7.56185 16.1378C7.6144 16.2749 7.74664 16.3647 7.89318 16.3647H16.1068C16.2545 16.3647 16.3856 16.2753 16.4384 16.1378L18.9759 9.58045C19.0333 9.43208 18.9852 9.26372 18.8578 9.16835ZM15.8633 15.6539H8.13698L6.1553 10.5341L9.14824 12.8876C9.23418 12.9557 9.34642 12.9802 9.4541 12.9525C9.56087 12.9265 9.64908 12.8525 9.69372 12.7515L12.0004 7.54112L14.2763 12.6838C14.3213 12.783 14.4078 12.857 14.5134 12.8839C14.619 12.9116 14.731 12.8885 14.8181 12.8218L17.8585 10.5008L15.8633 15.6539ZM16.4254 17.3181C16.4254 17.5145 16.2661 17.6738 16.0697 17.6738H7.92968C7.73333 17.6738 7.57409 17.5145 7.57409 17.3181C7.57409 17.1218 7.73341 16.9625 7.92968 16.9625H16.0697C16.2665 16.9625 16.4254 17.1218 16.4254 17.3181Z"
-                                        fill="#BFA764"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect width="14" height="14" fill="white" transform="translate(5 5)"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
+                        <div className="d-flex align-items-center " dangerouslySetInnerHTML={{ __html: IconsRegistry.MyTarget }}>
 
                         </div>
                         <div className="align-items-center">
