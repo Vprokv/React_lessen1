@@ -7,11 +7,12 @@ import './TextAndBackgroundColor.scss'
 import './MarginAndPadding.scss'
 import './DisplaySetting.scss'
 
+
 const Platforms = props => {
     return (
-        <div>
-            <div className="platforms-list-container d-flex">
-                <div class="container-left-content">
+
+            <div className="platforms-list-container flex-container">
+                <div className="container-left-content flex-container">
                     <div className="container-text-lion d-flex">
                         <div className="Symbol-Lion ">
                             <svg width="8" height="25" viewBox="0 0 8 25" fill="none"
@@ -28,7 +29,7 @@ const Platforms = props => {
                         </div>
                         <div className="Text-Lion write-color-white">Lion</div>
                     </div>
-                    <div className="container-text-left-menu d-flex m-t-25">
+                    <div className="container-text-left-menu d-flex">
                         <div className="Symbol-left-menu">
                             <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +43,7 @@ const Platforms = props => {
                         </div>
                         <div className="text-left-menu write-color-909090">MPlans</div>
                     </div>
-                    <div className="container-text-left-menu d-flex background-color-#1D1D1D m-t-25">
+                    <div className="container-text-left-menu d-flex background-color-1D1D1D border-bottom-gold">
                         <div className="Symbol-left-menu">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -59,8 +60,7 @@ const Platforms = props => {
                         </div>
                         <div className="text-left-menu write-color-white ">Platforms</div>
                     </div>
-                    <div className="border-bottom-gold m-t-5"></div>
-                    <div className="container-text-left-menu d-flex m-t-25">
+                    <div className="container-text-left-menu d-flex">
                         <div className="Symbol-left-menu">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +93,7 @@ const Platforms = props => {
                         </div>
                         <div className="text-left-menu write-color-909090">DBoards</div>
                     </div>
-                    <div className="container-text-left-menu d-flex m-t-25">
+                    <div className="container-text-left-menu d-flex">
                         <div className="Symbol-left-menu">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +124,7 @@ const Platforms = props => {
                         </div>
                         <div className="text-left-menu write-color-909090">Archive</div>
                     </div>
-                    <div className="container-text-left-menu d-flex m-t-25">
+                    <div className="container-text-left-menu d-flex">
                         <div className="Symbol-left-menu">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +138,7 @@ const Platforms = props => {
                         </div>
                         <div className="text-left-menu write-color-909090">Deals</div>
                     </div>
-                    <div className="container-text-left-menu d-flex m-t-25">
+                    <div className="container-text-left-menu d-flex">
                         <div className="Symbol-left-menu">
                             <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +161,7 @@ const Platforms = props => {
                         </div>
                         <div className="text-left-menu write-color-909090">References</div>
                     </div>
-                    <div className="container-text-left-menu d-flex m-t-50">
+                    <div className="container-text-left-menu d-flex ">
                         <div className="Symbol-left-menu">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +181,7 @@ const Platforms = props => {
                         </div>
                         <div className="text-left-menu write-color-909090">Wiki</div>
                     </div>
-                    <div className="container-text-left-menu d-flex m-t-100">
+                    <div className="container-text-left-menu d-flex m-t-a m-b-20">
                         <div className="Symbol-left-menu">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -195,7 +195,7 @@ const Platforms = props => {
                         </div>
                         <div className="text-left-menu write-color-909090">Settings</div>
                     </div>
-                    <div className="position-absolute  m-l-130">
+                    <div className="icon-toggle">
                         <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d)">
                                 <circle cx="19" cy="15" r="15" transform="rotate(-180 19 15)" fill="black"/>
@@ -219,9 +219,9 @@ const Platforms = props => {
                             </defs>
                         </svg>
                     </div>
-                    <div className="container-copyright">ⓒ Publicis Media 2019-2030</div>
+                    <div className="container-copyright position-absolute">ⓒ Publicis Media 2019-2030</div>
                 </div>
-                <div className="container-right-content">
+                <div className="container-right-content flex-container">
                     <div className="bar-platforms-TOP">
                         <div className="container-platforms">
                             <div className="text-platforms">Platforms</div>
@@ -253,6 +253,7 @@ const Platforms = props => {
                                 </svg>
                             </div>
                             <div className="circle background-color-#1D1D1D m-l-5">
+                                <img src="image/Platforms/IconUser.svg" alt="IconUser.svg"/>
                             </div>
                             <div className="Helvetica font-size-14px align-items-center d-flex m-l-5">
                                 <span className="font-weigh-bold "> Ekaterina </span>
@@ -262,10 +263,9 @@ const Platforms = props => {
                         </div>
                     </div>
                     <div className="CONTENT">
-                        <div className="container-AllertsPlatformsTrackerAnalytics">
-
-                            <button className="container-Allerts">
-                                <div className="text-allerts">
+                        <div className="groop-tabs-button">
+                            <button className="tabs-button">
+                                <div className="button-text">
                                     ALLERTS
                                 </div>
                                 <div className="m-l-5">
@@ -289,18 +289,18 @@ const Platforms = props => {
 
                                 </div>
                             </button>
-                            <button className="container-Platforms border-right-grey">
-                                <div className="text-platforms1 border-bottom-gold ">
+                            <button className="tabs-button">
+                                <div className="button-text current">
                                     PLATFORMS
                                 </div>
                             </button>
-                            <button className="container-Tracker border-right-grey">
-                                <div className="text-tracker">
+                            <button className="tabs-button">
+                                <div className="button-text">
                                     TRACKER
                                 </div>
                             </button>
-                            <button className="container-Tracker">
-                                <div className="text-tracker">
+                            <button className="tabs-button">
+                                <div className="button-text">
                                     ANALITICS
                                 </div>
                             </button>
@@ -338,9 +338,11 @@ const Platforms = props => {
                         </button>
                     </div>
                     <div className="Container-company  m-t-12">
-                        <img src="/assets/Platforms/MyTarget.svg" alt="MyTarget" className="container-logo"/>
+                        <div className="container-logo">
+                            <img src="image/Platforms/MyTarget.svg" alt="Logo My Target"/>
+                        </div>
                         <div className="Container-text-company">My Target</div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center ">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -363,11 +365,11 @@ const Platforms = props => {
                             </svg>
 
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Accounts</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">20 clients</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -389,11 +391,11 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Placement</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">10 000</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -436,20 +438,23 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Updated</div>
-                            <div className=" d-flex Helvetica font-size-16px write-color-909090 m-t-5">10.08.2019
-                                17:00
+                            <div className=" d-flex Helvetica font-size-16px write-color-909090 m-t-5">
+                                10.08.2019 17:00
                             </div>
                         </div>
                         <div
-                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090 m-l-80">VIEW
+                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090">
+                            VIEW
                         </div>
                     </div>
                     <div className="Container-company  m-t-10">
-                        <div className="container-logo"></div>
+                        <div className="container-logo">
+                            <img src="image/Platforms/YandexDirect.svg" alt="Logo YandexDirect.svg"/>
+                        </div>
                         <div className="Container-text-company">Yandex.Direct</div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center ">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -472,11 +477,11 @@ const Platforms = props => {
                             </svg>
 
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center ">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Accounts</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">20 clients</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center ">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -498,11 +503,11 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center ">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Placement</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">10 000 000</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center ">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -545,20 +550,23 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center ">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Updated</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-909090 m-t-5">10.08.2019
                                 17:00
                             </div>
                         </div>
                         <div
-                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090 m-l-80">VIEW
+                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090">
+                            VIEW
                         </div>
                     </div>
                     <div className="Container-company  m-t-10">
-                        <div className="container-logo"></div>
+                        <div className="container-logo">
+                            <img src="image/Platforms/YandexDisplay.svg" alt="Logo YandexDisplay.svg"/>
+                        </div>
                         <div className="Container-text-company">Yandex.Display</div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -581,11 +589,11 @@ const Platforms = props => {
                             </svg>
 
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Accounts</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">20 clients</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -607,11 +615,11 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Placement</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">10 000 000</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -654,20 +662,23 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Updated</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-909090 m-t-5">10.08.2019
                                 17:00
                             </div>
                         </div>
                         <div
-                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090 m-l-80">VIEW
+                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090">
+                            VIEW
                         </div>
                     </div>
                     <div className="Container-company  m-t-10">
-                        <div className="container-logo"></div>
+                        <div className="container-logo">
+                            <img src="image/Platforms/Ads.svg" alt="Logo GoogleAds.svg"/>
+                        </div>
                         <div className="Container-text-company">Google Ads</div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -690,11 +701,11 @@ const Platforms = props => {
                             </svg>
 
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Accounts</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">20 clients</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -716,11 +727,11 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Placement</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">10 000 000</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -763,20 +774,23 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center ">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Updated</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-909090 m-t-5">10.08.2019
                                 17:00
                             </div>
                         </div>
                         <div
-                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090 m-l-80">VIEW
+                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090">
+                            VIEW
                         </div>
                     </div>
                     <div className="Container-company  m-t-10">
-                        <div className="container-logo"></div>
+                        <div className="container-logo">
+                            <img src="image/Platforms/GoogleDV360.svg" alt="Logo GoogleDV360.svg"/>
+                        </div>
                         <div className="Container-text-company">Google Dv 360</div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -799,11 +813,11 @@ const Platforms = props => {
                             </svg>
 
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Accounts</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">20 clients</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -825,11 +839,11 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Placement</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">10 000 000</div>
                         </div>
-                        <div className="d-flex align-items-center m-l-60">
+                        <div className="d-flex align-items-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -872,17 +886,18 @@ const Platforms = props => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="align-items-center m-l-10">
+                        <div className="align-items-center">
                             <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Updated</div>
                             <div className=" d-flex Helvetica font-size-16px write-color-909090 m-t-5">10.08.2019
                                 17:00
                             </div>
                         </div>
                         <div
-                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090 m-l-80">VIEW
+                            className="button-120x30 write-color-white font-weigh-bold Helvetica font-size-12px background-color-#909090">
+                            VIEW
                         </div>
                     </div>
-                    <div className="bar-platforms-WIDTH m-l-20 m-t-10">
+                    <div className="bar-platforms-WIDTH">
                         <div className="text-AllPublicis">
                             All Publicis connections
                         </div>
@@ -898,7 +913,7 @@ const Platforms = props => {
                                     <div className="text-CocaCola">Coca Cola</div>
                                 </div>
                                 <div className="elements-Pepsi">
-                                    <div className="text-Pepsi">Pepsi</div>
+                                    <div className="text-pepsi">Pepsi</div>
                                 </div>
                                 <div className="elements-CocaCola">
                                     <div className="text-CocaCola">Coca Cola</div>
@@ -921,7 +936,7 @@ const Platforms = props => {
                 </div>
             </div>
 
-        </div>
+
     );
 };
 

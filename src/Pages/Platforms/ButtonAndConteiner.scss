@@ -1,27 +1,30 @@
 .Container-company {
-  height: 80px;
-  width: 1086px;
+
   border-radius: 2px;
   background: #FFFFFF;
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.09);
   border-radius: 2px;
   margin-left: 20px;
-  //margin-top: 10px;
-  display: flex;
+  margin-right: 25px;
+  display: grid;
+  grid-template-columns: 0.9fr 0.9fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1.3fr 1fr;
+  padding: 5px 0px 5px 0px;
+
   justify-content: left;
   align-items: center;
 }
 
 .container-logo{
-  margin-left: 20px ;
-  width: 100px;
+  margin-left: 40px ;
   height: 80px;
-  background: #BDBDBD;
+  display: inline-grid;
+  align-content: center;
+
 }
 
 .Container-text-company{
   height: 18px;
-  width: 115px;
+  //width: 115px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: normal;
@@ -29,7 +32,6 @@
   line-height: 140%;
   color: #333333;
   display: flex;
-  margin-left: 50px;
 }
 
 .button-120x30{
