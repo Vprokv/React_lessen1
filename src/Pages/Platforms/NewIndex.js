@@ -20,20 +20,20 @@ const Platforms = props => {
         {nameCompany: "Google Dv 360", updated: new Date()},
         ])
 
-    // const [newBlock, setNewBlockState] = useState(null)
-    //
-    // const onEditNewBlock = useCallback(({ target: { value, id }}) => {
-    //     setNewBlockState({ ...newBlock, [id]: value })
-    // }, [newBlock])
-    //
-    // const toggleAddNewBlock = useCallback(() => {
-    //     setNewBlockState(newBlock ? null : {})
-    // }, [newBlock])
-    //
-    // const applyChanges = useCallback(() => {
-    //     setBlocks([...blocks, { ...newBlock, updated: new Date() }])
-    //     toggleAddNewBlock()
-    // }, [newBlock, toggleAddNewBlock])
+    const [newBlock, setNewBlockState] = useState(null)
+
+    const onEditNewBlock = useCallback(({ target: { value, id }}) => {
+        setNewBlockState({ ...newBlock, [id]: value })
+    }, [newBlock])
+
+    const toggleAddNewBlock = useCallback(() => {
+        setNewBlockState(newBlock ? null : {})
+    }, [newBlock])
+
+    const applyChanges = useCallback(() => {
+        setBlocks([...blocks, { ...newBlock, updated: new Date() }])
+        toggleAddNewBlock()
+    }, [newBlock, toggleAddNewBlock])
 
     return (
 
@@ -392,210 +392,219 @@ const Platforms = props => {
                         </svg>
                     </button>
                 </div>
-                <div className="flex-container">
-                    {/*<button*/}
-                    {/*    className="button-120x30"*/}
-                    {/*    onClick={toggleAddNewBlock}*/}
-                    {/*>*/}
-                    {/*    {newBlock ? "Cancel add new Block" : "Add new Block+"}*/}
-                    {/*</button>*/}
-                    {/*{newBlock && newBlock.nameCompany && <button*/}
-                    {/*    className="button-120x30"*/}
-                    {/*    onClick={applyChanges}*/}
-                    {/*>*/}
-                    {/*    Apply Changes*/}
-                    {/*</button>}*/}
+                <div className="d-flex m-l-20">
+                    <button
+                        className="button-120x30 font-size-12px "
+                        onClick={toggleAddNewBlock}
+                    >
+                        {newBlock ? "Cancel add new Block" : "Add new Block+"}
+                    </button>
+                    {newBlock && newBlock.nameCompany && <button
+                        className="button-120x30 m-l-10 font-size-12px write-color-gold background-color-1D1D1D"
+                        onClick={applyChanges}
+                    >
+                        Apply Changes
+                    </button>}
                 </div>
-                {/*{newBlock && <div className="p-50" style={{ border: "1px dashed black", marginBottom: "50px"}}>*/}
-                {/*    <label htmlFor="nameCompany">nameCompany</label>*/}
-                {/*    <input*/}
-                {/*        style={{ border: "1px solid black", marginBottom: "10px" }}*/}
-                {/*        id="nameCompany"*/}
-                {/*        className="w-100-percent"*/}
-                {/*        type="text"*/}
-                {/*        value={newBlock.nameCompany}*/}
-                {/*        onChange={onEditNewBlock}*/}
-                {/*    />*/}
-                {/*    <label htmlFor="numbOfClients">numbOfClients</label>*/}
-                {/*    <input*/}
-                {/*        id="numbOfClients"*/}
-                {/*        style={{ border: "1px solid black", marginBottom: "10px" }}*/}
-                {/*        className="w-100-percent"*/}
-                {/*        type="text"*/}
-                {/*        value={newBlock.numbOfClients}*/}
-                {/*        onChange={onEditNewBlock}*/}
-                {/*    />*/}
-                {/*    <label htmlFor="numb">priority</label>*/}
-                {/*    <input*/}
-                {/*        id="numb"*/}
-                {/*        style={{ border: "1px solid black", marginBottom: "10px" }}*/}
-                {/*        className="w-100-percent"*/}
-                {/*        type="text"*/}
-                {/*        value={newBlock.numb}*/}
-                {/*        onChange={onEditNewBlock}*/}
-                {/*    />*/}
-                {/*</div>}*/}
-                {blocks.map(({nameCompany, numbOfClients = 10, numb = 10000, updated,}) => (
-                    <div className="Container-company  m-t-12">
-                        <div className="container-logo">
-                            <div className="d-flex align-items-center "
-                                 dangerouslySetInnerHTML={{__html: IconsRegistry[nameCompany]}}>
+                {newBlock && <div
+                    className="
+                     p-50
+                     m-20
+                     d-flex
+                     flex-direction-column
+                     border-d-black
+                     m-b-50"
+                >
+                    <label htmlFor="nameCompany">Name company</label>
+                    <input
+                        className="border-s-black m-b-10 w-100-percent m-r-20"
+                        id="nameCompany"
+                        type="text"
+                        value={newBlock.nameCompany}
+                        onChange={onEditNewBlock}
+                    />
+                    <label htmlFor="numbOfClients">Accounts (numb of clients)</label>
+                    <input
+                        id="numbOfClients"
+                        className="border-s-black m-b-10 w-100-percent m-r-20"
+                        type="text"
+                        value={newBlock.numbOfClients}
+                        onChange={onEditNewBlock}
+                    />
+                    <label htmlFor="numb">Placement</label>
+                    <input
+                        id="numb"
+                        className="border-s-black m-b-10 w-100-percent m-r-20"
+                        type="text"
+                        value={newBlock.numb}
+                        onChange={onEditNewBlock}
+                    />
+                    </div>}
+                    {blocks.map((
+                        {
+                            nameCompany,
+                            numbOfClients = 10,
+                            numb = 10000,
+                            updated,
+                        }) => (
+                        <div className="Container-company  m-t-12">
+                            <div className="container-logo">
+                                <div className="d-flex align-items-center "
+                                     dangerouslySetInnerHTML={{__html: IconsRegistry[nameCompany]}}>
                                 </div>
-                        </div>
-                        <div className="Container-text-company">{nameCompany}</div>
-                        <div className="d-flex align-items-center ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
-                                      height="24">
-                                    <circle cx="12" cy="12" r="12" fill="#C4C4C4"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <rect x="-5" y="-3" width="39" height="34" fill="#F3F3F3"/>
-                                </g>
-                                <g clip-path="url(#clip0)">
-                                    <path
-                                        d="M18.8578 9.16835C18.7304 9.07269 18.555 9.07368 18.4294 9.17041L14.7445 11.9834L12.326 6.51929C12.2116 6.2618 11.7895 6.2618 11.6747 6.51929L9.22794 12.0463L5.57507 9.17322C5.44891 9.07459 5.27248 9.07185 5.14396 9.16653C5.01499 9.26189 4.96617 9.43208 5.02404 9.58045L7.56185 16.1378C7.6144 16.2749 7.74664 16.3647 7.89318 16.3647H16.1068C16.2545 16.3647 16.3856 16.2753 16.4384 16.1378L18.9759 9.58045C19.0333 9.43208 18.9852 9.26372 18.8578 9.16835ZM15.8633 15.6539H8.13698L6.1553 10.5341L9.14824 12.8876C9.23418 12.9557 9.34642 12.9802 9.4541 12.9525C9.56087 12.9265 9.64908 12.8525 9.69372 12.7515L12.0004 7.54112L14.2763 12.6838C14.3213 12.783 14.4078 12.857 14.5134 12.8839C14.619 12.9116 14.731 12.8885 14.8181 12.8218L17.8585 10.5008L15.8633 15.6539ZM16.4254 17.3181C16.4254 17.5145 16.2661 17.6738 16.0697 17.6738H7.92968C7.73333 17.6738 7.57409 17.5145 7.57409 17.3181C7.57409 17.1218 7.73341 16.9625 7.92968 16.9625H16.0697C16.2665 16.9625 16.4254 17.1218 16.4254 17.3181Z"
-                                        fill="#BFA764"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect width="14" height="14" fill="white" transform="translate(5 5)"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-
-                        </div>
-                        <div className="align-items-center">
-                            <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Accounts</div>
-                            <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">{numbOfClients} clients</div>
-                        </div>
-                        <div className="d-flex align-items-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
-                                      height="24">
-                                    <circle cx="12" cy="12" r="12" fill="#C4C4C4"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <rect x="-5" y="-1" width="37" height="30" fill="#F3F3F3"/>
-                                </g>
-                                <g clip-path="url(#clip0)">
-                                    <path
-                                        d="M19.9952 10.9963L13.6149 4V8.19086H12.8737C11.0378 8.19086 9.31158 8.90585 8.01329 10.2041C6.715 11.5024 6 13.2286 6 15.0647V18L7.22449 16.6583C8.86244 14.8638 11.1875 13.8257 13.6149 13.8021V17.9926L19.9952 10.9963ZM6.82042 15.8909V15.0647C6.82042 13.4478 7.45007 11.9276 8.59338 10.7842C9.73669 9.64093 11.2568 9.01128 12.8737 9.01128H14.4352V6.11711L18.885 10.9963L14.4352 15.8755V12.9814H13.6992C11.1096 12.9814 8.61945 14.0383 6.82042 15.8909Z"
-                                        fill="#BFA764"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect width="14" height="14" fill="white" transform="translate(6 4)"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
-                        <div className="align-items-center">
-                            <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Placement</div>
-                            <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">{numb}</div>
-                        </div>
-                        <div className="d-flex align-items-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
-                                      height="24">
-                                    <circle cx="12" cy="12" r="12" fill="#C4C4C4"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <rect x="-8" y="-8" width="43" height="39" fill="#F3F3F3"/>
-                                </g>
-                                <g clip-path="url(#clip0)">
-                                    <path
-                                        d="M13.2121 16.9297C13.1131 16.9544 13.0123 16.9763 12.9121 16.9947C12.6503 17.0434 12.4773 17.2951 12.5257 17.5572C12.5496 17.6861 12.6228 17.7934 12.7222 17.8635C12.8246 17.9356 12.955 17.9682 13.0879 17.9434C13.2071 17.9213 13.3273 17.8953 13.4452 17.8658C13.7037 17.8015 13.8612 17.5396 13.7967 17.2813C13.7324 17.0227 13.4708 16.8653 13.2121 16.9297Z"
-                                        fill="#BFA764"/>
-                                    <path
-                                        d="M16.7797 10.4637C16.8135 10.5655 16.878 10.6486 16.9595 10.7061C17.0803 10.7912 17.2384 10.8198 17.3893 10.7699C17.6422 10.6859 17.7793 10.4132 17.6956 10.1604C17.6574 10.0451 17.6151 9.92948 17.5701 9.81691C17.4711 9.56953 17.1905 9.44909 16.943 9.54804C16.6958 9.64694 16.5753 9.92763 16.6743 10.1751C16.7122 10.2697 16.7477 10.3668 16.7797 10.4637Z"
-                                        fill="#BFA764"/>
-                                    <path
-                                        d="M14.7796 16.2409C14.6945 16.2971 14.6067 16.3515 14.5182 16.4024C14.2874 16.5356 14.2083 16.8306 14.3414 17.0614C14.3775 17.1241 14.4257 17.1754 14.4811 17.2147C14.6299 17.3194 14.832 17.335 15.0003 17.2381C15.1055 17.1774 15.2101 17.1129 15.3114 17.0459C15.5336 16.8991 15.5948 16.5998 15.4479 16.3775C15.3011 16.1551 15.0019 16.094 14.7796 16.2409Z"
-                                        fill="#BFA764"/>
-                                    <path
-                                        d="M17.9955 11.8111C17.985 11.5449 17.7607 11.3376 17.4944 11.348C17.2284 11.3585 17.021 11.5829 17.0314 11.849C17.0354 11.9508 17.0365 12.0541 17.0341 12.1557C17.0304 12.3227 17.1121 12.4715 17.239 12.561C17.3146 12.6142 17.4063 12.6465 17.5058 12.6487C17.7721 12.6546 17.9927 12.4435 17.9986 12.1771C18.0013 12.0556 18.0003 11.9325 17.9955 11.8111Z"
-                                        fill="#BFA764"/>
-                                    <path
-                                        d="M16.7007 14.9719C16.4872 14.8117 16.1852 14.8552 16.0253 15.0683C15.964 15.15 15.8995 15.2306 15.8335 15.3082C15.6609 15.5109 15.6853 15.8155 15.8881 15.9882C15.8996 15.998 15.9113 16.007 15.9234 16.0154C16.125 16.1575 16.4051 16.1249 16.5681 15.9336C16.6469 15.841 16.7238 15.7447 16.797 15.6473C16.9569 15.4341 16.9136 15.1319 16.7007 14.9719Z"
-                                        fill="#BFA764"/>
-                                    <path
-                                        d="M17.4099 13.228C17.1556 13.1483 16.8849 13.2898 16.8053 13.544C16.7748 13.6412 16.741 13.7387 16.7045 13.8343C16.6244 14.0447 16.7011 14.2762 16.8771 14.4002C16.9093 14.4229 16.9449 14.4421 16.9835 14.4567C17.2324 14.5517 17.5111 14.4268 17.606 14.1778C17.6493 14.0642 17.6895 13.9481 17.7258 13.8326C17.8054 13.5784 17.664 13.3077 17.4099 13.228Z"
-                                        fill="#BFA764"/>
-                                    <path
-                                        d="M11.1075 16.9991C10.6762 16.9217 10.2624 16.7898 9.87012 16.6059C9.86548 16.6035 9.86133 16.6007 9.85645 16.5985C9.764 16.555 9.67171 16.5084 9.58225 16.4597C9.58194 16.4593 9.58137 16.4591 9.58088 16.4589C9.41674 16.3685 9.25656 16.2685 9.10093 16.1589C6.83166 14.5604 6.28604 11.4136 7.88468 9.1444C8.2323 8.65114 8.65297 8.23963 9.12196 7.91347C9.12773 7.90945 9.13351 7.90545 9.13924 7.9014C10.7919 6.76269 13.0359 6.68595 14.7907 7.85608L14.4138 8.40065C14.309 8.55222 14.3735 8.66267 14.5569 8.64617L16.1941 8.4996C16.3778 8.48309 16.4876 8.32421 16.4382 8.14684L15.9986 6.56286C15.9493 6.38528 15.8233 6.36402 15.7184 6.51557L15.3407 7.06143C14.0529 6.19695 12.5083 5.86731 10.9752 6.13316C10.8208 6.15988 10.6685 6.19259 10.5184 6.23066C10.5172 6.23087 10.5163 6.231 10.5153 6.2312C10.5095 6.23262 10.5037 6.23451 10.498 6.23608C9.176 6.57557 8.02256 7.34662 7.1995 8.44674C7.19257 8.45497 7.18542 8.46302 7.17887 8.47197C7.1515 8.50883 7.12434 8.54654 7.09774 8.58426C7.05425 8.64606 7.01138 8.70942 6.97036 8.77277C6.96523 8.7804 6.96131 8.78817 6.95682 8.79588C6.27763 9.84836 5.95003 11.0651 6.00621 12.3039C6.00634 12.3079 6.00611 12.312 6.00621 12.3162C6.01165 12.4372 6.02125 12.5599 6.03428 12.6807C6.03497 12.6885 6.0367 12.6959 6.03802 12.7036C6.05148 12.8251 6.06838 12.9468 6.08956 13.0685C6.30479 14.3103 6.89055 15.4276 7.76829 16.2971C7.77033 16.2991 7.77245 16.3013 7.77451 16.3034C7.77523 16.3042 7.77603 16.3047 7.77673 16.3054C8.01255 16.538 8.26906 16.7531 8.54525 16.9477C9.26803 17.457 10.0729 17.7936 10.9372 17.9487C11.1995 17.9958 11.45 17.8213 11.4971 17.5591C11.5441 17.2968 11.3697 17.0461 11.1075 16.9991Z"
-                                        fill="#BFA764"/>
-                                    <path
-                                        d="M11.7039 8.146C11.4882 8.146 11.3134 8.32089 11.3134 8.53631V12.4249L14.8698 14.2633C14.9271 14.293 14.9884 14.3069 15.0487 14.3069C15.1899 14.3069 15.3264 14.23 15.3957 14.0958C15.4947 13.9042 15.4198 13.6689 15.2282 13.57L12.0939 11.9496V8.53631C12.0939 8.32089 11.9194 8.146 11.7039 8.146Z"
-                                        fill="#BFA764"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect width="12" height="12" fill="white" transform="translate(6 6)"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
-                        <div className="align-items-center">
-                            <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Updated</div>
-                            <div className=" d-flex Helvetica font-size-16px write-color-909090 m-t-5">
-                                {updated.toUTCString()}
                             </div>
-                        </div>
-                        <div className="button-120x30 write-color-white font-weigh-bold
-                        Helvetica font-size-12px background-color-#909090">
-                            VIEW
-                        </div>
-                    </div>
-                ))
-                }
-                <div className="bar-platforms-WIDTH">
-                    <div className="text-AllPublicis">
-                        All Publicis connections
-                    </div>
-                    <div className="filter-container">
-                        <div className="text-MyFilters">
-                            My filters
-                        </div>
-                        <div className="filter-elements">
-                            <div className="elements-Samsung">
-                                <div className="text-Samsung">Samsung</div>
-                            </div>
-                            <div className="elements-CocaCola">
-                                <div className="text-CocaCola">Coca Cola</div>
-                            </div>
-                            <div className="elements-Pepsi">
-                                <div className="text-pepsi">Pepsi</div>
-                            </div>
-                            <div className="elements-CocaCola">
-                                <div className="text-CocaCola">Coca Cola</div>
-                            </div>
-                            <div className="m-l-10 align-items-center j-c-center m-t-5">
-
-                                <svg width="41" height="32" viewBox="0 0 41 32" fill="none"
+                            <div className="Container-text-company">{nameCompany}</div>
+                            <div className="d-flex align-items-center ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="2.5" cy="2.97879" rx="2.5" ry="2.65957" fill="#BDBDBD"/>
-                                    <ellipse cx="2.5" cy="10.4254" rx="2.5" ry="2.65957" fill="#BDBDBD"/>
-                                    <ellipse cx="2.5" cy="17.8722" rx="2.5" ry="2.65957" fill="#BDBDBD"/>
-                                    <path
-                                        d="M12.5391 12.4336V11.4492H15.0938V8.87695H16.0957V11.4492H18.6504V12.4336H16.0957V15H15.0938V12.4336H12.5391ZM20.4902 12.8613C20.5605 13.4629 20.8398 13.8789 21.3281 14.1094C21.5781 14.2266 21.8672 14.2852 22.1953 14.2852C22.8203 14.2852 23.2832 14.0859 23.584 13.6875C23.8848 13.2891 24.0352 12.8477 24.0352 12.3633C24.0352 11.7773 23.8555 11.3242 23.4961 11.0039C23.1406 10.6836 22.7129 10.5234 22.2129 10.5234C21.8496 10.5234 21.5371 10.5938 21.2754 10.7344C21.0176 10.875 20.7969 11.0703 20.6133 11.3203L19.6992 11.2676L20.3379 6.75H24.6973V7.76953H21.1289L20.7715 10.1016C20.9668 9.95312 21.1523 9.8418 21.3281 9.76758C21.6406 9.63867 22.002 9.57422 22.4121 9.57422C23.1816 9.57422 23.834 9.82227 24.3691 10.3184C24.9043 10.8145 25.1719 11.4434 25.1719 12.2051C25.1719 12.998 24.9258 13.6973 24.4336 14.3027C23.9453 14.9082 23.1641 15.2109 22.0898 15.2109C21.4062 15.2109 20.8008 15.0195 20.2734 14.6367C19.75 14.25 19.457 13.6582 19.3945 12.8613H20.4902Z"
-                                        fill="white"/>
+                                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                                          height="24">
+                                        <circle cx="12" cy="12" r="12" fill="#C4C4C4"/>
+                                    </mask>
+                                    <g mask="url(#mask0)">
+                                        <rect x="-5" y="-3" width="39" height="34" fill="#F3F3F3"/>
+                                    </g>
+                                    <g clip-path="url(#clip0)">
+                                        <path
+                                            d="M18.8578 9.16835C18.7304 9.07269 18.555 9.07368 18.4294 9.17041L14.7445 11.9834L12.326 6.51929C12.2116 6.2618 11.7895 6.2618 11.6747 6.51929L9.22794 12.0463L5.57507 9.17322C5.44891 9.07459 5.27248 9.07185 5.14396 9.16653C5.01499 9.26189 4.96617 9.43208 5.02404 9.58045L7.56185 16.1378C7.6144 16.2749 7.74664 16.3647 7.89318 16.3647H16.1068C16.2545 16.3647 16.3856 16.2753 16.4384 16.1378L18.9759 9.58045C19.0333 9.43208 18.9852 9.26372 18.8578 9.16835ZM15.8633 15.6539H8.13698L6.1553 10.5341L9.14824 12.8876C9.23418 12.9557 9.34642 12.9802 9.4541 12.9525C9.56087 12.9265 9.64908 12.8525 9.69372 12.7515L12.0004 7.54112L14.2763 12.6838C14.3213 12.783 14.4078 12.857 14.5134 12.8839C14.619 12.9116 14.731 12.8885 14.8181 12.8218L17.8585 10.5008L15.8633 15.6539ZM16.4254 17.3181C16.4254 17.5145 16.2661 17.6738 16.0697 17.6738H7.92968C7.73333 17.6738 7.57409 17.5145 7.57409 17.3181C7.57409 17.1218 7.73341 16.9625 7.92968 16.9625H16.0697C16.2665 16.9625 16.4254 17.1218 16.4254 17.3181Z"
+                                            fill="#BFA764"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="14" height="14" fill="white" transform="translate(5 5)"/>
+                                        </clipPath>
+                                    </defs>
                                 </svg>
 
-
+                            </div>
+                            <div className="align-items-center">
+                                <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Accounts</div>
+                                <div
+                                    className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">{numbOfClients} clients
+                                </div>
+                            </div>
+                            <div className="d-flex align-items-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                                          height="24">
+                                        <circle cx="12" cy="12" r="12" fill="#C4C4C4"/>
+                                    </mask>
+                                    <g mask="url(#mask0)">
+                                        <rect x="-5" y="-1" width="37" height="30" fill="#F3F3F3"/>
+                                    </g>
+                                    <g clip-path="url(#clip0)">
+                                        <path
+                                            d="M19.9952 10.9963L13.6149 4V8.19086H12.8737C11.0378 8.19086 9.31158 8.90585 8.01329 10.2041C6.715 11.5024 6 13.2286 6 15.0647V18L7.22449 16.6583C8.86244 14.8638 11.1875 13.8257 13.6149 13.8021V17.9926L19.9952 10.9963ZM6.82042 15.8909V15.0647C6.82042 13.4478 7.45007 11.9276 8.59338 10.7842C9.73669 9.64093 11.2568 9.01128 12.8737 9.01128H14.4352V6.11711L18.885 10.9963L14.4352 15.8755V12.9814H13.6992C11.1096 12.9814 8.61945 14.0383 6.82042 15.8909Z"
+                                            fill="#BFA764"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="14" height="14" fill="white" transform="translate(6 4)"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div className="align-items-center">
+                                <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Placement</div>
+                                <div className=" d-flex Helvetica font-size-16px write-color-gold m-t-5">{numb}</div>
+                            </div>
+                            <div className="d-flex align-items-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                                          height="24">
+                                        <circle cx="12" cy="12" r="12" fill="#C4C4C4"/>
+                                    </mask>
+                                    <g mask="url(#mask0)">
+                                        <rect x="-8" y="-8" width="43" height="39" fill="#F3F3F3"/>
+                                    </g>
+                                    <g clip-path="url(#clip0)">
+                                        <path
+                                            d="M13.2121 16.9297C13.1131 16.9544 13.0123 16.9763 12.9121 16.9947C12.6503 17.0434 12.4773 17.2951 12.5257 17.5572C12.5496 17.6861 12.6228 17.7934 12.7222 17.8635C12.8246 17.9356 12.955 17.9682 13.0879 17.9434C13.2071 17.9213 13.3273 17.8953 13.4452 17.8658C13.7037 17.8015 13.8612 17.5396 13.7967 17.2813C13.7324 17.0227 13.4708 16.8653 13.2121 16.9297Z"
+                                            fill="#BFA764"/>
+                                        <path
+                                            d="M16.7797 10.4637C16.8135 10.5655 16.878 10.6486 16.9595 10.7061C17.0803 10.7912 17.2384 10.8198 17.3893 10.7699C17.6422 10.6859 17.7793 10.4132 17.6956 10.1604C17.6574 10.0451 17.6151 9.92948 17.5701 9.81691C17.4711 9.56953 17.1905 9.44909 16.943 9.54804C16.6958 9.64694 16.5753 9.92763 16.6743 10.1751C16.7122 10.2697 16.7477 10.3668 16.7797 10.4637Z"
+                                            fill="#BFA764"/>
+                                        <path
+                                            d="M14.7796 16.2409C14.6945 16.2971 14.6067 16.3515 14.5182 16.4024C14.2874 16.5356 14.2083 16.8306 14.3414 17.0614C14.3775 17.1241 14.4257 17.1754 14.4811 17.2147C14.6299 17.3194 14.832 17.335 15.0003 17.2381C15.1055 17.1774 15.2101 17.1129 15.3114 17.0459C15.5336 16.8991 15.5948 16.5998 15.4479 16.3775C15.3011 16.1551 15.0019 16.094 14.7796 16.2409Z"
+                                            fill="#BFA764"/>
+                                        <path
+                                            d="M17.9955 11.8111C17.985 11.5449 17.7607 11.3376 17.4944 11.348C17.2284 11.3585 17.021 11.5829 17.0314 11.849C17.0354 11.9508 17.0365 12.0541 17.0341 12.1557C17.0304 12.3227 17.1121 12.4715 17.239 12.561C17.3146 12.6142 17.4063 12.6465 17.5058 12.6487C17.7721 12.6546 17.9927 12.4435 17.9986 12.1771C18.0013 12.0556 18.0003 11.9325 17.9955 11.8111Z"
+                                            fill="#BFA764"/>
+                                        <path
+                                            d="M16.7007 14.9719C16.4872 14.8117 16.1852 14.8552 16.0253 15.0683C15.964 15.15 15.8995 15.2306 15.8335 15.3082C15.6609 15.5109 15.6853 15.8155 15.8881 15.9882C15.8996 15.998 15.9113 16.007 15.9234 16.0154C16.125 16.1575 16.4051 16.1249 16.5681 15.9336C16.6469 15.841 16.7238 15.7447 16.797 15.6473C16.9569 15.4341 16.9136 15.1319 16.7007 14.9719Z"
+                                            fill="#BFA764"/>
+                                        <path
+                                            d="M17.4099 13.228C17.1556 13.1483 16.8849 13.2898 16.8053 13.544C16.7748 13.6412 16.741 13.7387 16.7045 13.8343C16.6244 14.0447 16.7011 14.2762 16.8771 14.4002C16.9093 14.4229 16.9449 14.4421 16.9835 14.4567C17.2324 14.5517 17.5111 14.4268 17.606 14.1778C17.6493 14.0642 17.6895 13.9481 17.7258 13.8326C17.8054 13.5784 17.664 13.3077 17.4099 13.228Z"
+                                            fill="#BFA764"/>
+                                        <path
+                                            d="M11.1075 16.9991C10.6762 16.9217 10.2624 16.7898 9.87012 16.6059C9.86548 16.6035 9.86133 16.6007 9.85645 16.5985C9.764 16.555 9.67171 16.5084 9.58225 16.4597C9.58194 16.4593 9.58137 16.4591 9.58088 16.4589C9.41674 16.3685 9.25656 16.2685 9.10093 16.1589C6.83166 14.5604 6.28604 11.4136 7.88468 9.1444C8.2323 8.65114 8.65297 8.23963 9.12196 7.91347C9.12773 7.90945 9.13351 7.90545 9.13924 7.9014C10.7919 6.76269 13.0359 6.68595 14.7907 7.85608L14.4138 8.40065C14.309 8.55222 14.3735 8.66267 14.5569 8.64617L16.1941 8.4996C16.3778 8.48309 16.4876 8.32421 16.4382 8.14684L15.9986 6.56286C15.9493 6.38528 15.8233 6.36402 15.7184 6.51557L15.3407 7.06143C14.0529 6.19695 12.5083 5.86731 10.9752 6.13316C10.8208 6.15988 10.6685 6.19259 10.5184 6.23066C10.5172 6.23087 10.5163 6.231 10.5153 6.2312C10.5095 6.23262 10.5037 6.23451 10.498 6.23608C9.176 6.57557 8.02256 7.34662 7.1995 8.44674C7.19257 8.45497 7.18542 8.46302 7.17887 8.47197C7.1515 8.50883 7.12434 8.54654 7.09774 8.58426C7.05425 8.64606 7.01138 8.70942 6.97036 8.77277C6.96523 8.7804 6.96131 8.78817 6.95682 8.79588C6.27763 9.84836 5.95003 11.0651 6.00621 12.3039C6.00634 12.3079 6.00611 12.312 6.00621 12.3162C6.01165 12.4372 6.02125 12.5599 6.03428 12.6807C6.03497 12.6885 6.0367 12.6959 6.03802 12.7036C6.05148 12.8251 6.06838 12.9468 6.08956 13.0685C6.30479 14.3103 6.89055 15.4276 7.76829 16.2971C7.77033 16.2991 7.77245 16.3013 7.77451 16.3034C7.77523 16.3042 7.77603 16.3047 7.77673 16.3054C8.01255 16.538 8.26906 16.7531 8.54525 16.9477C9.26803 17.457 10.0729 17.7936 10.9372 17.9487C11.1995 17.9958 11.45 17.8213 11.4971 17.5591C11.5441 17.2968 11.3697 17.0461 11.1075 16.9991Z"
+                                            fill="#BFA764"/>
+                                        <path
+                                            d="M11.7039 8.146C11.4882 8.146 11.3134 8.32089 11.3134 8.53631V12.4249L14.8698 14.2633C14.9271 14.293 14.9884 14.3069 15.0487 14.3069C15.1899 14.3069 15.3264 14.23 15.3957 14.0958C15.4947 13.9042 15.4198 13.6689 15.2282 13.57L12.0939 11.9496V8.53631C12.0939 8.32089 11.9194 8.146 11.7039 8.146Z"
+                                            fill="#BFA764"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="12" height="12" fill="white" transform="translate(6 6)"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div className="align-items-center">
+                                <div className=" d-flex Helvetica font-weigh-bold font-size-16px">Updated</div>
+                                <div className=" d-flex Helvetica font-size-16px write-color-909090 m-t-5">
+                                    {updated.toUTCString()}
+                                </div>
+                            </div>
+                            <div className="button-120x30 write-color-white font-weigh-bold
+                        Helvetica font-size-12px background-color-#909090">
+                                VIEW
                             </div>
                         </div>
-                    </div>
-                    <div className="button-167x30 m-t-20 m-l-90 write-color-white Helvetica font-size-12px">VIEW ALL
+                    ))
+                    }
+                    <div className="bar-platforms-WIDTH">
+                        <div className="text-AllPublicis">
+                            All Publicis connections
+                        </div>
+                        <div className="filter-container">
+                            <div className="text-MyFilters">
+                                My filters
+                            </div>
+                            <div className="filter-elements">
+                                <div className="elements-Samsung">
+                                    <div className="text-Samsung">Samsung</div>
+                                </div>
+                                <div className="elements-CocaCola">
+                                    <div className="text-CocaCola">Coca Cola</div>
+                                </div>
+                                <div className="elements-Pepsi">
+                                    <div className="text-pepsi">Pepsi</div>
+                                </div>
+                                <div className="elements-CocaCola">
+                                    <div className="text-CocaCola">Coca Cola</div>
+                                </div>
+                                <div className="m-l-10 align-items-center j-c-center m-t-5">
+
+                                    <svg width="41" height="32" viewBox="0 0 41 32" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <ellipse cx="2.5" cy="2.97879" rx="2.5" ry="2.65957" fill="#BDBDBD"/>
+                                        <ellipse cx="2.5" cy="10.4254" rx="2.5" ry="2.65957" fill="#BDBDBD"/>
+                                        <ellipse cx="2.5" cy="17.8722" rx="2.5" ry="2.65957" fill="#BDBDBD"/>
+                                        <path
+                                            d="M12.5391 12.4336V11.4492H15.0938V8.87695H16.0957V11.4492H18.6504V12.4336H16.0957V15H15.0938V12.4336H12.5391ZM20.4902 12.8613C20.5605 13.4629 20.8398 13.8789 21.3281 14.1094C21.5781 14.2266 21.8672 14.2852 22.1953 14.2852C22.8203 14.2852 23.2832 14.0859 23.584 13.6875C23.8848 13.2891 24.0352 12.8477 24.0352 12.3633C24.0352 11.7773 23.8555 11.3242 23.4961 11.0039C23.1406 10.6836 22.7129 10.5234 22.2129 10.5234C21.8496 10.5234 21.5371 10.5938 21.2754 10.7344C21.0176 10.875 20.7969 11.0703 20.6133 11.3203L19.6992 11.2676L20.3379 6.75H24.6973V7.76953H21.1289L20.7715 10.1016C20.9668 9.95312 21.1523 9.8418 21.3281 9.76758C21.6406 9.63867 22.002 9.57422 22.4121 9.57422C23.1816 9.57422 23.834 9.82227 24.3691 10.3184C24.9043 10.8145 25.1719 11.4434 25.1719 12.2051C25.1719 12.998 24.9258 13.6973 24.4336 14.3027C23.9453 14.9082 23.1641 15.2109 22.0898 15.2109C21.4062 15.2109 20.8008 15.0195 20.2734 14.6367C19.75 14.25 19.457 13.6582 19.3945 12.8613H20.4902Z"
+                                            fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="button-167x30 m-t-20 m-l-90 write-color-white Helvetica font-size-12px">VIEW ALL
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-
+                    </div>
     );
 };
 
